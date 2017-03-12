@@ -63,6 +63,11 @@ tags
 /kernel/include/config
 /kernel/include/generated
 /kernel/arch/*/include/generated
+/kernel/arch/*/dts/.*.cmd
+/kernel/arch/*/dts/.*.tmp
+/kernel/arch/*/dts/.*.dts
+
+
 
 # stgit generated dirs
 patches-*
@@ -116,3 +121,13 @@ output/
 !/external/patch/*.patch
 /toolchain/
 /Image/
+
+# Build uboot
+u-boot/include/generated/
+u-boot/*.map
+u-boot/*.log
+u-boot/*.srec
+u-boot/u-boot
+
+
+

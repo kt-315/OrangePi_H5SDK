@@ -1,7 +1,0 @@
-sun50iw2p1-soc.o: arch/arm64/boot/dts/sun50iw2p1-soc.dts \
- arch/arm64/boot/dts/sun50iw2p1.dtsi \
- /home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/interrupt-controller/arm-gic.h \
- /home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/interrupt-controller/irq.h \
- /home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/gpio/gpio.h \
- arch/arm64/boot/dts/sun50iw2p1-clk.dtsi \
- arch/arm64/boot/dts/sun50iw2p1-pinctrl.dtsi

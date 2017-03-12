@@ -31,6 +31,8 @@ TOOLS=$ROOT/toolchain/gcc-linaro-aarch/bin/aarch64-linux-gnu-
 # OUTPUT DIRECT
 BUILD=$ROOT/output
 CORES=$((`cat /proc/cpuinfo | grep processor | wc -l` - 1))
+# UBOOT tools
+UTOOLS=$ROOT/u-boot/tools
 
 if [ ! -d $BUILD ]; then
 	mkdir -p $BUILD
@@ -99,7 +101,8 @@ if [ $BUILD_KERNEL = "1" ]; then
 	cd -
 
 	# Perpare uImage
-	mkimage -A arm -n "OrangePiH5" -O linux -T kernel -C none -a 0x40080000 -e 0x40080000 \
+	echo -e "\e[1;31m Start mkimage DTS \e[0m"
+	$UTOOLS/mkimage -A arm -n "OrangePiH5" -O linux -T kernel -C none -a 0x40080000 -e 0x40080000 \
 		-d $LINUX/arch/arm64/boot/Image $BUILD/uImage
 
 	## Create uEnv.txt
